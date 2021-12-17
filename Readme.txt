@@ -6,7 +6,8 @@ $0                      // Shell script name ( eg - ./shell.sh )
 $1, $2, ... , $n        // nth argument to the shell script
 $#                      // Number of arguments
 $$                      // PID of current shell script      
-
+$@                      // Consider input args as seperate strings
+$*                      // Consider all args as single string
 
 
 For Loop ---->
@@ -17,6 +18,19 @@ For Loop ---->
 for i in {1..20}        // For i 1 to 20
 for i in {1..20..4}     // Steps of 4 - 1,5,9,13,17
 for ((i=0;i<21;i++))    // For loop like in c/c++
+
+
+Functions ---->
+Eg -
+function foo()
+{
+            echo "Number of args = $#"
+            echo "First arg = $1"
+            echo "Script name = $0"
+            return 54;
+}
+foo 23 34
+RET=$?
 
 
 
