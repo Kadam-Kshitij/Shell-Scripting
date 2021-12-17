@@ -1,5 +1,24 @@
 Shell-Scripting
 
+Special characters ---->
+$?                      // Return value of last command
+$0                      // Shell script name ( eg - ./shell.sh )
+$1, $2, ... , $n        // nth argument to the shell script
+$#                      // Number of arguments
+$$                      // PID of current shell script      
+
+
+
+For Loop ---->
+            for <>;
+            do
+               <statements>
+            done
+for i in {1..20}        // For i 1 to 20
+for i in {1..20..4}     // Steps of 4 - 1,5,9,13,17
+for ((i=0;i<21;i++))    // For loop like in c/c++
+
+
 
 Cut ---->
 cut -b 3    // Display 3rd character
@@ -25,3 +44,11 @@ tail -f <file_name>             // Track new lines added to the file
 Head/Tail ---->
 head -n 22 | tail -n 11         // Display lines 12 to 22
 
+
+
+Uniq ---->
+uniq                    // Remove "adjacent" duplicate lines
+uniq -c                 // Display count and text ( eg - 2 aa )
+uniq -i                 // Case insensitive
+uniq -u                 // Display lines which are not repeacted adjacently
+uniq -d                 // Display only repeated lines
