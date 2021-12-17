@@ -8,6 +8,8 @@ $#                      // Number of arguments
 $$                      // PID of current shell script      
 $@                      // Consider input args as seperate strings
 $*                      // Consider all args as single string
+$!                      // Process number of last background process
+
 
 ============= if/elif/else ==============
 if [[condition]];
@@ -25,6 +27,20 @@ fi
 
 ============= String comparisions =============
 ==, !=
+[[ -z "$string" ]]      // Empty string ( Either not defined or = "" )
+[[ -n "$string" ]]      // Not empty string
+
+============= Logical =============
+||, &&, !
+
+============= File ==============
+[[ -e "/etc/shells" ]]              // Exists
+[[ -f FILE ]]                       // File
+[[ -h FILE ]]                       // Symbolic link
+[[ -d FILE ]]                       // Directory
+[[ -r FILE ]]                       // Readable
+[[ -x FILE ]]                       // Executable
+[[ -w FILE ]]                       // Writeable
 
 
 ============= For Loop =============
