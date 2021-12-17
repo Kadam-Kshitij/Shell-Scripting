@@ -28,7 +28,7 @@ fi
 
 
 ============= For Loop =============
-for <>;
+for [[condition]];
 do
        <statements>
 done
@@ -47,6 +47,14 @@ until [[condition]]
 do
             <statements>
 done
+
+============= Case =============
+case "$var" in
+            1) <command>;;
+            2) <command>;;
+            *) <command>;;
+esac
+
 
 
 ============= Break/Continue ==============
