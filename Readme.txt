@@ -16,3 +16,12 @@ head -c 4 <file_name>           // Display first 4 charcters
 head -q -n 6 <file1> <file2>    // Display first six lines of each file without displaying the file name
 
 
+Tail --->
+tail -n 4 <file_name>           // Display last 4 lines
+tail -c 4 <file_name>           // Display last 4 charcters
+tail -f <file_name>             // Track new lines added to the file
+
+
+Head/Tail ---->
+head -n 22 | tail -n 11         // Display lines 12 to 22
+
