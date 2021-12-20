@@ -152,3 +152,23 @@ tr "i" "kj"                         // Replace i with k
 tr -d "zd"                          // Delete all z and d
 tr -cd "ks"                         // Delete everything except k and s
 tr -s "[:blank:]"                   // Replace multiple blank with one blank
+
+
+
+============== GREP ==============
+-r                      // Recursively search in given directory
+-i                      // Case insensitive
+-n                      // Display line number
+-h                      // Do not display the file name
+-H                      // With file names
+-e                      // Multiple patterns
+-v                      // Invert search
+-w                      // Work match
+-E or egrep             // Extended regex
+
+^                       // Beginning of line
+$                       // End of line
+
+.                       // Single character
+[abc]                   // Any one of these characters
+[^abc]                  // Any character except these 
