@@ -128,3 +128,24 @@ uniq -c                 // Display count and text ( eg - 2 aa )
 uniq -i                 // Case insensitive
 uniq -u                 // Display lines which are not repeacted adjacently
 uniq -d                 // Display only repeated lines
+
+============= Tr ( Translate ) =============
+-c          // Complement
+-d          // Delete
+-s          // 
+// Replaces set1 with set2 - tr [options] [SET1] [SET2]
+[:digit:]   // All digits
+[:alpha:]   // All alphabates
+[:alnum:]   // All digits + alphabates
+[:upper:]   // All upper case
+[:lower:]   // All lower case
+[:blank:]   // All horizontal spaces
+[:space:]   // All vertical spaces
+
+Eg -
+tr "[a-z]" "[A-Z]"                  // Replace upper with lower
+tr "[:upper:]" "[:lower:]"          // Replace upper case with lower case
+tr "ip" "kj"                        // Replace i with k and p with j
+tr "ip" "k"                         // Replace i and p with k
+tr "i" "kj"                         // Replace i with k
+tr -d "zd"                          // Delete all z and d
