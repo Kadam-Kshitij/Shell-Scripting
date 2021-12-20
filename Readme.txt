@@ -130,9 +130,10 @@ uniq -u                 // Display lines which are not repeacted adjacently
 uniq -d                 // Display only repeated lines
 
 ============= Tr ( Translate ) =============
--c          // Complement
+-c          // Complement of set 1
 -d          // Delete
--s          // 
+-s          // replace each sequence of a repeated character that is listed in the last specified SET, with a single occurrence of that character
+
 // Replaces set1 with set2 - tr [options] [SET1] [SET2]
 [:digit:]   // All digits
 [:alpha:]   // All alphabates
@@ -149,3 +150,5 @@ tr "ip" "kj"                        // Replace i with k and p with j
 tr "ip" "k"                         // Replace i and p with k
 tr "i" "kj"                         // Replace i with k
 tr -d "zd"                          // Delete all z and d
+tr -cd "ks"                         // Delete everything except k and s
+tr -s "[:blank:]"                   // Replace multiple blank with one blank
