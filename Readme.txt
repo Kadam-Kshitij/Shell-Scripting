@@ -172,3 +172,29 @@ $                       // End of line
 .                       // Single character
 [abc]                   // Any one of these characters
 [^abc]                  // Any character except these 
+
+
+============ SED ============
+sed -n '/abc/p' <file>                         // Print all lines containing abc
+sed -n '/abc/!p' <file>                        // Print all lines not containing abc
+sed -n '/abc/Ip' <file>                        // Print all lines containing abc case insensitive
+
+sed '/abc/d' <file>                            // Print lines not containing abc
+sed '/abc/!d' <file>                           // Print lines containing abc
+
+sed 's/abc/pqr/g' <file>                       // Replace all occurances of abc with pqr
+sed 's/abc/pqr/5' <file>                       // Replace 5th occurance of abc with pqr in every line
+sed '5 s/abc/pqr' <file>                       // Replace abc with pqr only on the 5th line
+
+sed '2a <Text>' <file>                         // Insert line after line number 2
+sed '$a <Text>' <file>                         // Insert line at the end of file
+sed '2i <Text>' <file>                         // Insert line before line 2
+
+sed -n '1,4 p' <file>                          // Print lines 1 to 4
+
+sed -e '<patten>' -e '<patten>' <file>         // Multiple pattens
+
+I           // Case insensitive
+g           // global
+e           // Execute multiple commands
+i           // Put output in the same file
