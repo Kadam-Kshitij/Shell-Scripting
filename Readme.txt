@@ -59,6 +59,7 @@ do
 done
 
 ============= Unitl ==============
+Until the condition is not met execute.
 until [[condition]]
 do
             <statements>
