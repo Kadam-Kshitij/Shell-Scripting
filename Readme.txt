@@ -155,6 +155,9 @@ tr -cd "ks"                         // Delete everything except k and s
 tr -s "[:blank:]"                   // Replace multiple blank with one blank
 
 
+============ echo ============
+echo "$var Text `<command>`"
+
 
 ============== GREP ==============
 -r                      // Recursively search in given directory
