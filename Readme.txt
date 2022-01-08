@@ -121,6 +121,7 @@ head -n 22 | tail -n 11         // Display lines 12 to 22
 wc -l       // Number of lines
 wc -m       // Number of characters. EOF also considered as a character.
 wc -c       // Number of bytes
+wc -w       // Number of words
 
 
 ============= Uniq =============
