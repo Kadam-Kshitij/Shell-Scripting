@@ -170,14 +170,28 @@ echo "$var Text `<command>`"
 -v                      // Invert search
 -w                      // Work match
 -E or egrep             // Extended regex
+-o                      // Display only relevant output
+-l                      // Display only list of finenames
+-c                      // Display number of lines which contain the word
+-A -B -C                // Display n lines before, after and around output line
 
+============ REG EXP ==============
 ^                       // Beginning of line
 $                       // End of line
+\<                      // Start of word
+\>                      // End of word
 
 .                       // Single character
 [abc]                   // Any one of these characters
 [^abc]                  // Any character except these 
 
+?                       // Preceding character should be repeated zero or one time
+*                       // Preceding character should be repeated zero or more times
++                       // Preceding character should be repeated one or one time
+
+{n}, {n,}, {,m} {n,m}   // Preceding character appears 
+
+() () \1 \2             // Capture group and remember
 
 ============ SED ============
 sed -n '/abc/p' <file>                         // Print all lines containing abc
