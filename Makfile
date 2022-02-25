@@ -1,0 +1,14 @@
+Werror - Make all errors as warnings
+Wall - Enables some warning flags
+Wextra - Enable some more extra warning flags not enabled by Wall
+
+fPIC - Position independant code. Code does not have to be at specific location to work
+jumps will be relative rather than absolute.
+
+Shared library must be compiled with -fPIC ( but not mandatory )
+since shared library is used by multiple processes and it might not be possible to load it at a required location.
+
+Shared vs Static
+1) Linking done by os. Linking done by linker
+2) Linking happens as last step of compilation process. At run time.
+2) Compatibility is an issue. No issue since all code is in one executable
