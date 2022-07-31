@@ -1,5 +1,7 @@
 Shell-Scripting
 
+#! - Shebang notation. Used at the start to set the interpreter which will be used to execute the rest of the script.
+
 ============= Special characters =============
 $?                      // Return value of last command
 $0                      // Shell script name ( eg - ./shell.sh )
