@@ -225,3 +225,11 @@ i           // Put output in the same file
 Arithmatic operations can be performed inside (( ))
 (( sum = $1 + $2 ))
 sum=$(($1+$2))
+
+
+============= Awk ==============
+awk 'BEGIN{ ORS = " / "; FS = "," } $2 > 80  { print $2, $3 $4 } END{ print "END", NR}' file.txt
+awk 'BEGIN{ FS = ","} {sum += $2} END{ print sum/NR}' marks.txt // Average of second column
+NR - Number of records processed so far
+NF - Number of fields in current record
+FS, OFS, RS, ORS - Sperators for Input and Output fields and records
