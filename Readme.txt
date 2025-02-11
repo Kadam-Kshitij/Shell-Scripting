@@ -212,6 +212,7 @@ sed '$a <Text>' <file>                         // Insert line at the end of file
 sed '2i <Text>' <file>                         // Insert line before line 2
 
 sed -n '1,4 p' <file>                          // Print lines 1 to 4
+sed '1,4 d' <file>                             // Delete lines 1 to 4
 
 sed -e '<patten>' -e '<patten>' <file>         // Multiple pattens
 
@@ -233,3 +234,6 @@ awk 'BEGIN{ FS = ","} {sum += $2} END{ print sum/NR}' marks.txt // Average of se
 NR - Number of records processed so far
 NF - Number of fields in current record
 FS, OFS, RS, ORS - Sperators for Input and Output fields and records
+
+
+
