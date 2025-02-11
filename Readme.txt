@@ -219,3 +219,9 @@ I           // Case insensitive
 g           // global
 e           // Execute multiple commands
 i           // Put output in the same file
+
+
+============ Arithmatic operations ==============
+Arithmatic operations can be performed inside (( ))
+(( sum = $1 + $2 ))
+sum=$(($1+$2))
