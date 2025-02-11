@@ -6,7 +6,7 @@ Shell-Scripting
 $?                      // Return value of last command
 $0                      // Shell script name ( eg - ./shell.sh )
 $1, $2, ... , $n        // nth argument to the shell script
-$#                      // Number of arguments
+$#                      // Number of arguments after the script name
 $$                      // PID of current shell script      
 $@                      // Consider input args as seperate strings
 $*                      // Consider all args as single string
