@@ -236,4 +236,13 @@ NF - Number of fields in current record
 FS, OFS, RS, ORS - Sperators for Input and Output fields and records
 
 
+============= ls ==============
+l - List in long form
+r - reverse the order
+R - List subdirectories recusrsively
+a - all file starting with . ..
+S - Sort by size
+t - Sort by modification time
+
+
 
