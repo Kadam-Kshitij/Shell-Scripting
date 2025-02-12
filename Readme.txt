@@ -250,3 +250,18 @@ echo "file1" | xargs -I {} touch abc/{}                // Replace the content {}
 
 ============== tee ==============
 echo "Hello, World!" | tee -a output.txt            // Redirect output to both std output and file, -a is for appending
+
+============= Arrays ============
+#!/bin/bash
+
+arr=("Apple A" "Mango M" "Grape G")
+
+echo ${#arr[@]}
+echo ${arr[0]}
+
+arr+=("Orange O")
+unset arr[1]
+
+for i in $(seq 0 ${#arr[@]}); do
+        echo ${arr[i]}
+done
