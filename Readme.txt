@@ -244,5 +244,7 @@ a - all file starting with . ..
 S - Sort by size
 t - Sort by modification time
 
-
+============== xargs ==============
+echo "file1 file2 file3" | xargs -n 1 touch            // Limits the number of args to use at a time
+echo "file1" | xargs -I {} touch abc/{}                // Replace the content {} with the args in the command
 
