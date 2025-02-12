@@ -248,3 +248,5 @@ t - Sort by modification time
 echo "file1 file2 file3" | xargs -n 1 touch            // Limits the number of args to use at a time
 echo "file1" | xargs -I {} touch abc/{}                // Replace the content {} with the args in the command
 
+============== tee ==============
+echo "Hello, World!" | tee -a output.txt            // Redirect output to both std output and file, -a is for appending
