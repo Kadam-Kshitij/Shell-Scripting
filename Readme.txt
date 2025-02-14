@@ -265,3 +265,8 @@ unset arr[1]
 for i in $(seq 0 ${#arr[@]}); do
         echo ${arr[i]}
 done
+
+============= Cron ==============
+`cronab -e`
+`2 3 * * * <command>` Minute, Hour, Date, Month, Day of week ( 0 is Sunday )<br>
+`*/3 * * * * <command>` Run every 3 minutes.<br>
