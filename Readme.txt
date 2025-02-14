@@ -270,3 +270,8 @@ done
 `cronab -e`
 `2 3 * * * <command>` Minute, Hour, Date, Month, Day of week ( 0 is Sunday )<br>
 `*/3 * * * * <command>` Run every 3 minutes.<br>
+
+(( )) - Used for mathematical operation
+( ) - Run command in a seperate subshell
+[ ] - Array index
+[ ] / [[ ]] - Condition check and extended condition check
