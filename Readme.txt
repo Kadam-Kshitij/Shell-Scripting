@@ -271,7 +271,27 @@ done
 `2 3 * * * <command>` Minute, Hour, Date, Month, Day of week ( 0 is Sunday )<br>
 `*/3 * * * * <command>` Run every 3 minutes.<br>
 
+============ Brackets ===========
 (( )) - Used for mathematical operation
 ( ) - Run command in a seperate subshell
 [ ] - Array index
 [ ] / [[ ]] - Condition check and extended condition check
+{ } - Variable expansion
+
+Fibonacci <br>
+```
+#!/bin/bash
+
+function foo()
+{
+    echo $1
+    if [[ $2 -gt 100 ]]; then
+        return
+    else
+        ((sum=$1+$2))
+        foo $2 $sum
+    fi
+}
+
+foo 0 1
+```
